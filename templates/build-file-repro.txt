@@ -1,0 +1,20 @@
+# Reproduction of build file failure: failed to remove out/Release
+
+URL: https://ci.nodejs.org/job/node-test-commit/18943/
+Source: https://github.com/nodejs/node/pull/20985/
+Commit: [5f7e056] fs: do not crash when using a closed fs event watcher
+Date: 2018-05-27 13:05:05 +0800
+Author: Someone <foo@bar.com>
+
+#### [RUN_SUBSET=0,label=pi1-docker](https://ci.nodejs.org/job/node-test-binary-arm/RUN_SUBSET=0,label=pi1-docker/1590/console)
+
+<details>
+<summary>See failures</summary>
+
+```
+warning: failed to remove out/Release
+Removing config.gypi
+Removing icu_config.gypi
+Removing node
+```
+</details>

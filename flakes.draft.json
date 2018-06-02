@@ -1,0 +1,13 @@
+[{
+  // path under test/ without extension
+  "file": "parallel/test-http-readable-data-event",
+  // IDs of PR where the flake reproduced, could show up in forks
+  "pull_requests": [
+    "https://github.com/nodejs/node/pulls/12345"
+  ],
+  "added": "2018-06-04T14:58:29.061Z",
+  // Issue tracking the flake
+  "issue": "https://github.com/nodejs/reliability/issues/1",
+  // Output from the test.py
+  "severity": "fail"
+}]
