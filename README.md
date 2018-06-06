@@ -3,6 +3,9 @@
 This repo is used for tracking flaky tests on the Node.js CI and
 fixing them.
 
+**Current status**: work in progress. Please go to the issue tracker
+to discuss!
+
 <!-- TOC -->
 
 - [Updating this repo](#updating-this-repo)
