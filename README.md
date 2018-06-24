@@ -8,14 +8,14 @@ This repo is used for tracking flaky tests on the Node.js CI and fixing them.
 
 - [Updating this repo](#updating-this-repo)
 - [The Goal](#the-goal)
-  - [The Definition of Green](#the-definition-of-green)
+    - [The Definition of Green](#the-definition-of-green)
 - [CI Health History](#ci-health-history)
 - [Handling Failed CI runs](#handling-failed-ci-runs)
-  - [Flaky Tests](#flaky-tests)
-    - [Identifying Flaky Tests](#identifying-flaky-tests)
-    - [When Discovering a Potential New Flake on the CI](#when-discovering-a-potential-new-flake-on-the-ci)
-  - [Infrastructure failures](#infrastructure-failures)
-  - [Build File Failures](#build-file-failures)
+    - [Flaky Tests](#flaky-tests)
+        - [Identifying Flaky Tests](#identifying-flaky-tests)
+        - [When Discovering a Potential New Flake on the CI](#when-discovering-a-potential-new-flake-on-the-ci)
+    - [Infrastructure failures](#infrastructure-failures)
+    - [Build File Failures](#build-file-failures)
 - [TODO](#todo)
 
 <!-- /TOC -->
@@ -58,6 +58,7 @@ See https://nodejs-ci-health.mmarchini.me/#/job-summary
 | 2018-06-03 11:36 | 3       | 6       | 21       | 10      | 60      | 6.89%      |
 | 2018-06-04 15:00 | 0       | 9       | 26       | 10      | 55      | 10.00%     |
 | 2018-06-15 17:42 | 1       | 27      | 4        | 17      | 51      | 32.93%     |
+| 2018-06-24 18:11 | 0       | 27      | 2        | 8       | 63      | 29.35%     |
 
 ## Handling Failed CI runs
 
