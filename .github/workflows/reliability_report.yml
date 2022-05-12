@@ -23,6 +23,7 @@ jobs:
     - run: ncu-config --global set token ${{ secrets.USER_TOKEN }}
     - run: ncu-config --global set username ${{ secrets.USER_NAME }}
     - run: ncu-ci walk pr --stats=true --markdown $PWD/results.md
+    - run: cat $PWD/results.md >> $GITHUB_STEP_SUMMARY
     - run: |      
         title_date=$(date +%Y-%m-%d)
         echo "{ \"title\": \"CI Reliability ${title_date}\", \"body\": " >> body.json
