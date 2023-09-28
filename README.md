@@ -64,47 +64,47 @@ issue. But it should still leave a summary in the actions page.
 ### Identifying flaky JS tests
 
 1. Check out the `JSTest Failure` section of the latest reliability report.
-    It contains information about the JS tests that failed more than 1 pull
-    requests in the last 100 `node-test-pull-request` CI runs. The more
-    pull requests a test fail, the higher it would be ranked, and the more
-    likely that it is a flake.
+  It contains information about the JS tests that failed more than 1 pull
+  requests in the last 100 `node-test-pull-request` CI runs. The more
+  pull requests a test fail, the higher it would be ranked, and the more
+  likely that it is a flake.
 2. Search the name of the test in [the Node.js issue tracker](https://github.com/nodejs/node/issues)
-    and see if there is already an issue about it. If there is already
-    an issue, check if the failures are similar. Comment with updates
-    if necessary.
+  and see if there is already an issue about it. If there is already
+  an issue, check if the failures are similar. Comment with updates
+  if necessary.
 3. If the flake isn't already tracked by an issue, continue to look into
-   it. In the report of a JS test, check out the pull requests that it
-   fails and see if there is a connection. If the pull requests appear to
-   be unrelated, it is more likely that the test is a flake.
+  it. In the report of a JS test, check out the pull requests that it
+  fails and see if there is a connection. If the pull requests appear to
+  be unrelated, it is more likely that the test is a flake.
 4. Search the historical reliability reports with the name of the test in
-   the reliability issue tracker, and see how long the flake has been showing
-   up. Gather information from the historical reports, and
-   [open an issue](https://github.com/nodejs/node/issues/new?assignees=&labels=flaky-test&projects=&template=4-report-a-flaky-test.yml)
-   in the Node.js issue tracker to track the flake.
+  the reliability issue tracker, and see how long the flake has been showing
+  up. Gather information from the historical reports, and
+  [open an issue](https://github.com/nodejs/node/issues/new?assignees=&labels=flaky-test&projects=&template=4-report-a-flaky-test.yml)
+  in the Node.js issue tracker to track the flake.
 
 ### Handling flaky JS tests
 
 1. If the flake only starts to show up in the recent month, check the
-   historical reports to see precisely when it starts to show up. Look at
-   commits landing on the target branch around the same time using
-   `https://github.com/nodejs/node/commits?since=YYYY-MM-DD`
-   and see if there is any pull request that looks related. If one or
-   more related pull requests can be found, ping the author or the
-   reviewer of the pull request, or the team in charge of the
-   related subsystem in the tracking issue or in private to see if
-   they can come up with a fix to just deflake the test.
+  historical reports to see precisely when it starts to show up. Look at
+  commits landing on the target branch around the same time using
+  `https://github.com/nodejs/node/commits?since=YYYY-MM-DD`
+  and see if there is any pull request that looks related. If one or
+  more related pull requests can be found, ping the author or the
+  reviewer of the pull request, or the team in charge of the
+  related subsystem in the tracking issue or in private to see if
+  they can come up with a fix to just deflake the test.
 2. If the test has been flaky for more than a month and no one is actively
-   working on it, it is unlikely to go away on its own, and it's time
-   to mark it as flaky. For example, if `parallel/some-flaky-test.js`
-   has been flaky on Windows in the CI, after making sure that there is an
-   issue tracking it, open a pull request to add the following entry to
-   [`test/parallel/parallel.status`](https://github.com/nodejs/node/tree/main/test/parallel/parallel.status):
+  working on it, it is unlikely to go away on its own, and it's time
+  to mark it as flaky. For example, if `parallel/some-flaky-test.js`
+  has been flaky on Windows in the CI, after making sure that there is an
+  issue tracking it, open a pull request to add the following entry to
+  [`test/parallel/parallel.status`](https://github.com/nodejs/node/tree/main/test/parallel/parallel.status):
 
-    ```
-    [$system==win32]
-    # https://github.com/nodejs/node/issues/<TRACKING_ISSUE_ID>
-    some-flaky-test: PASS,FLAKY
-    ```
+   ```
+   [$system==win32]
+   # https://github.com/nodejs/node/issues/<TRACKING_ISSUE_ID>
+   some-flaky-test: PASS,FLAKY
+   ```
 
 ### Identifying infrastructure issues
 
@@ -147,7 +147,7 @@ to include this information in the report.
 ## TODO
 
 - [ ] Read the flake database in ncu-ci so people can quickly tell if
-      a failure is a flake
+    a failure is a flake
 - [ ] Automate the report process in ncu-ci
 - [ ] Migrate existing issues in nodejs/node and nodejs/build, close outdated
-      ones.
+    ones.
