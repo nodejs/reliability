@@ -18,7 +18,7 @@ jobs:
     - uses: actions/setup-node@v3
       with:
         node-version: 16
-    - run: npm i -g node-core-utils
+    - run: npm i -g @node-core/utils
     - run: ncu-config --global set jenkins_token ${{ secrets.JENKINS_TOKEN }}
     - run: ncu-config --global set token ${{ secrets.USER_TOKEN }}
     - run: ncu-config --global set username ${{ secrets.USER_NAME }}
