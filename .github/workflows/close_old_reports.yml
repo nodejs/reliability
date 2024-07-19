@@ -1,0 +1,19 @@
+name: 'Close old reliability reports'
+on:
+  schedule:
+    - cron: '0 0 * * *'
+
+permissions:
+    issues: write
+
+jobs:
+  stale:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/stale@v9
+        with:
+          stale-issue-message: 'Due to inactivity on this reliability report, it is being closed in 48 hours, unless additional activity occurs.'
+          close-issue-message: 'Due to inactivity on this reliability report, it has been closed.'
+          only-labels: 'reliability-report'
+          days-before-stale: 7
+          days-before-close: 2
