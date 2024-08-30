@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 set -x
+
+git checkout main
 mkdir -p reports
 DATENAME=$(date +"%Y-%m-%d")
 REPORT=reports/$DATENAME.md
