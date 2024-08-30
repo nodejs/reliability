@@ -7,6 +7,7 @@
 name: Update CI reliability
 
 permissions:
+  issues: write
   contents: write
 
 on:
