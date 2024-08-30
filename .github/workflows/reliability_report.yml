@@ -42,7 +42,7 @@ jobs:
       - name: Generate reports
         run: |
           cd reliability
-          ./generate-report.sh
+          bash ./generate-report.sh
           cat ./progress.md >> $GITHUB_STEP_SUMMARY
           cat ./reports/$(date +%Y-%m-%d).md >> $GITHUB_STEP_SUMMARY
 
